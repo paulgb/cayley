@@ -93,7 +93,9 @@ $(function() {
       lineNumbers: true,
       matchBrackets: true,
       continueComments: "Enter",
-      //        extraKeys: {"Ctrl-Q": "toggleComment"}
+      extraKeys: {'Shift-Enter': function() {
+        $('#run_button').trigger('click');
+      }},
     });
   } else{
     editor = null;
