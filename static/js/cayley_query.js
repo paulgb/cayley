@@ -34,7 +34,7 @@ $(function() {
         stopAndReset();
       })
       .fail(function(jqxhr, textStatus, errorThrown){
-        output_editor.setValue(jqxhr.responseText)
+        output_editor.setValue(jqxhr.responseText || 'Connection error');
         stopAndReset();
       })
   })
